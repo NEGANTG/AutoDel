@@ -1,0 +1,52 @@
+{
+  "name": "AutoDelete-V2",
+  "description": "delete group messages after a specific time",
+  "keywords": [
+    "telegram",
+    "delete",
+    "bot"
+  ],
+  "repository": "https://github.com/Arun-TG/AutoDelete-V2",
+  "logo": "https://telegra.ph/file/8cd549b2beef98e83349e.jpg",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Get it from @Botfather",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Your telegram API ID, Get it from my.telegram.org",
+      "value": ""
+    },
+    "API_HASH":{
+      "description": "Your telegram API HASH, Get it from my.telegram.org",
+      "value": ""
+    },
+    "SESSION":{
+      "description": "Pyrogram session generated from the link in Readme",
+      "value": ""
+    },
+    "ADMINS":{
+      "description": "ID of admins",
+      "value": ""
+    },
+    "GROUPS":{
+      "description": "ID of the groups where the bot work (seperate by spaces)",
+      "value": ""
+    },
+    "TIME": {
+      "description": "Time in seconds",
+      "value": "300"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
